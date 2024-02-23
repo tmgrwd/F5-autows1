@@ -21,6 +21,10 @@
       force_basic_auth: yes
       status_code: 200
       body_format: json
+    register: as3_output
 
-
+  - name: DEBUG AS3
+    debug:
+      msg: "Debug info {{ as3_output }}"
+      
 ...
